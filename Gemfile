@@ -9,10 +9,13 @@ gem 'thin'
 gem 'rails_admin'
 gem 'jquery-rails'
 gem 'newrelic_rpm'
+gem 'sinatra', :require => nil #required for sidekiq gui
+gem 'sidekiq', '3.2.1'
 
 # Uploads and images
 gem 'fog'
 gem 'carrierwave'
+gem 'carrierwave_backgrounder'
 gem 'mini_magick'
 
 group :assets do
@@ -28,7 +31,7 @@ group :development, :test do
   gem 'launchy'
   gem 'pry-rails'
   gem 'with_model'
-  gem 'database_cleaner'  
+  gem 'database_cleaner'
 end
 
 group :production do

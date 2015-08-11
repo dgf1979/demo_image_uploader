@@ -3,4 +3,5 @@ class Photo < ActiveRecord::Base
   validates :image, :presence => true
   #carrierwave uploader
   mount_uploader :image, ImageUploader
+  process_in_background :image
 end
